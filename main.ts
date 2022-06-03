@@ -162,7 +162,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Taco, function (sprite, otherSpr
 info.onCountdownEnd(function () {
     scoreEndGame = info.score()
     endGame = true
-    sendMessageToSimulator("event", "Score: " + info.score() + "endGame" + true)
+    sendMessageToSimulator("event", "endGame")
     console.log(endGame)
     game.over(false, effects.blizzard)
 })
@@ -202,14 +202,14 @@ function giveIntro () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `)
-    showIntro("Busca en tu jardÃ­n todo lo que necesitas")
+    showIntro("Busca en tu jard’n todo lo que necesitas")
     showIntro("para ser el King of the Grill. ")
-    showIntro("Â¡Pero cuidado con el fuego!")
+    showIntro("ÁPero cuidado con el fuego!")
 }
 info.onLifeZero(function () {
     scoreEndGame = info.score()
     endGame = true
-    sendMessageToSimulator("event", "Score: " + info.score() + "endGame" + true)
+    sendMessageToSimulator("event", "endGame")
     console.log(endGame)
     game.over(false, effects.blizzard)
 })
